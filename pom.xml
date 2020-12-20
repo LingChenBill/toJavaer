@@ -38,13 +38,6 @@
             <version>4.13</version>
             <scope>test</scope>
         </dependency>
-
-        <!--单例相关依赖.-->
-        <!--<dependency>-->
-        <!--    <groupId>org.sonatype.sisu</groupId>-->
-        <!--    <artifactId>sisu-inject-bean</artifactId>-->
-        <!--    <version>1.4.2</version>-->
-        <!--</dependency>-->
     </dependencies>
 
     <dependencyManagement>
