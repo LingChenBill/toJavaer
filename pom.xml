@@ -23,6 +23,7 @@
         <commons.version>4.4</commons.version>
         <commonsIO.version>2.8.0</commonsIO.version>
         <servlet.version>4.0.1</servlet.version>
+        <springframework.version>4.3.27.RELEASE</springframework.version>
     </properties>
 
     <dependencies>
@@ -95,6 +96,23 @@
             <version>${servlet.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
