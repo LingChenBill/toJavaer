@@ -7,6 +7,9 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 /**
+ * 1)把方法的参数都放到SpEL解析的RootObject中.
+ * 2)把LogRecordContext中的变量都放到RootObject中.
+ * 3)把方法的返回值和ErrorMsg都放到RootObject中.
  * @author: lingchen
  * @date: 2022/5/8
  */

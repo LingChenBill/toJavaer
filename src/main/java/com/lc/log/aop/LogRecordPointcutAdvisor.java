@@ -38,6 +38,18 @@ public class LogRecordPointcutAdvisor extends AbstractBeanFactoryPointcutAdvisor
         return execute(methodInvocation, methodInvocation.getThis(), method, methodInvocation.getArguments());
     }
 
+    /**
+     * 操作日志的记录持久化是在方法执行完之后执行的，当方法抛出异常之后会先捕获异常，
+     * 等操作日志持久化完成后再抛出异常.
+     * 在业务的方法执行之前，会对提前解析的自定义函数求值，
+     * 解决了前面提到的需要查询修改之前的内容.
+     * @param invoker
+     * @param target
+     * @param method
+     * @param args
+     * @return
+     * @throws Throwable
+     */
     private Object execute(MethodInvocation invoker, Object target, Method method, Object[] args) throws Throwable {
 
         Class<?> targetClass = getTargetClass(target);
